@@ -1,6 +1,6 @@
 # Quorum-sensing simulation of the Sin system of Shinorizobium meliloti
 
-This project contains three algorythms to simulate the quorum sensing Sin system of Sinorhizobium meliloti on Matlab.
+This project contains three algorythms to simulate on Matlab the quorum sensing Sin system of Sinorhizobium meliloti .
 
 ## Model
 
