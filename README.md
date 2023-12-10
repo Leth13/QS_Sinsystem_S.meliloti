@@ -2,7 +2,7 @@
 
 This project contains three algorythms to simulate the quorum sensing Sin system of Sinorhizobium meliloti on Matlab.
 
-## Reactions
+## Model
 
 blah blah
 
