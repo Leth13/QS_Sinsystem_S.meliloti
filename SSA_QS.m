@@ -1,4 +1,4 @@
-function [SINIplot, SINRplot, EXPRstarplot, EXPRplot, DNAsinRstarplot, timeplot, meantime] = SSA_QS(y, parameters, numberofcells, numberofreactions)
+function [SINIplot, SINRplot, EXPRstarplot, EXPRplot, timeplot, meantime] = SSA_QS(y, parameters, numberofcells, numberofreactions)
 
 beta = parameters(1);
 alpha = parameters(2);
@@ -79,75 +79,98 @@ for i=1:numberofcells
                 a0 = a1 + a2 + a3 +a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a20 + a21 + a22 + a23 + a24; 
                 step = step+(1/a0)*log(1/rr(1));
                 m = rr(2)*a0;
-                if m <= a1 %beta*DNAexpR
+                if m <= a1 
+                %beta*DNAexpR
                     EXPR = EXPR + 1;
-                elseif m <= (a1 + a2) %mu*EXPR
+                elseif m <= (a1 + a2)
+                %mu*EXPR
                     EXPR = EXPR - 1;
-                elseif m <= (a1 + a2 + a3) %epsilon*EXPR
+                elseif m <= (a1 + a2 + a3)
+                %epsilon*EXPR
                     EXPR = EXPR -1;
-                elseif m <= (a1 + a2 + a3 + a4) %beta*DNAsinIstar
+                elseif m <= (a1 + a2 + a3 + a4)
+                %beta*DNAsinIstar
                     SINI = SINI + 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5) %mu*SINI
+                elseif m <= (a1 + a2 + a3 + a4 + a5)
+                %mu*SINI
                     SINI = SINI - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6) %epsilon*SINI
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6)
+                 %epsilon*SINI
                     SINI = SINI - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7) %alpha*SINI
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7)
+                %alpha*SINI
                     AHL_i = AHL_i + 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8) %mu*AHL_i
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8)
+                 %mu*AHL_i
                     AHL_i = AHL_i - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9) %epsilon*AHL_i
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9)
+                %epsilon*AHL_i
                     AHL_i = AHL_i - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10) %deltaO*AHL_i
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10)
+                %deltaO*AHL_i
                     AHL_i = AHL_i -1;
                     AHL_o = AHL_o +1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11) %deltaI*AHL_o
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11)
+                %deltaI*AHL_o
                     AHL_i = AHL_i +1;
                     AHL_o = AHL_o -1;
-                elseif m < (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12) %k2/volume*AHL_i*EXPR
+                elseif m < (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12)
+                %k2/volume*AHL_i*EXPR
                     AHL_i = AHL_i - 1;
                     EXPR = EXPR - 1;
                     EXPRstar = EXPRstar + 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13) %k1*EXPRstar
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13)
+                %k1*EXPRstar
                     AHL_i = AHL_i + 1;
                     EXPR = EXPR + 1;
                     EXPRstar = EXPRstar - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14) %mu*EXPRstar
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14)
+                %mu*EXPRstar
                     EXPRstar = EXPRstar - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15) %k3/volume*DNAsinI*SINR
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15)
+                %k3/volume*DNAsinI*SINR
                     DNAsinIstar = DNAsinIstar + 1;
                     DNAsinI = DNAsinI - 1;
                     SINR = SINR - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16) %k4*DNAsinIstar
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16)
+                %k4*DNAsinIstar
                     DNAsinIstar = DNAsinIstar - 1;
                     DNAsinI = DNAsinI + 1;
                     SINR = SINR + 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17) %k7/volume/volume*DNAsinI*SINR*EXPRstar
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17)
+                %k7/volume/volume*DNAsinI*SINR*EXPRstar
                     DNAsinIstar = DNAsinIstar + 1;
                     DNAsinI = DNAsinI - 1;
                     SINR = SINR - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18) %k5/volume*EXPRstar*DNAsinR
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18)
+                %k5/volume*EXPRstar*DNAsinR
                     DNAsinRstar = DNAsinRstar + 1;
                     DNAsinR = DNAsinR - 1;
                     EXPRstar = EXPRstar - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19) %k6*DNAsinRstar
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19)
+                %k6*DNAsinRstar
                     DNAsinRstar = DNAsinRstar - 1;
                     DNAsinR = DNAsinR + 1;
                     EXPRstar = EXPRstar + 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21) %beta*DNAsinR%epsilon*SINR
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21)
+                %beta*DNAsinR%epsilon*SINR
                     SINR = SINR - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21 + a22) %mu*SINR
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21 + a22)
+                %mu*SINR
                     SINR = SINR - 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21 + a22 + a20)%beta*DNAsinR
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21 + a22 + a20)
+                %beta*DNAsinR
                     SINR = SINR + 1;
-                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21 + a22 + a20 + a23)%rho*AHL_o
+                elseif m <= (a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12 + a13 + a14 + a15 + a16 + a17 + a18 + a19 + a21 + a22 + a20 + a23)
+                %rho*AHL_o
                     AHL_o = AHL_o - 1;
                 else
+                %EXPRstar*epsilon
                     EXPRstar = EXPRstar - 1;
                 end
                 SINIplot(k, i) = SINI;
                 EXPRplot(k, i) = EXPR;
                 SINRplot(k, i) = SINR;
-                DNAsinRstarplot(k, i) = DNAsinRstar;
                 EXPRstarplot(k, i) = EXPRstar;
                 timeplot(k, i) = step;
                 k = k + 1;
@@ -155,6 +178,7 @@ for i=1:numberofcells
     totaltime = max(timeplot(:, i)) + totaltime;
 end
 
-meantime = totaltime/numberofcells; %calculate the mean time of all the iterations
+%calculate the mean time of all the iterations
+meantime = totaltime/numberofcells;
 
 end
