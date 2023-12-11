@@ -10,7 +10,7 @@ The transcription and translation rates of all genes were simplified in one rate
 
 ## Reaction Rates
 
-The reaction rates are in the parameters.txt file. They were extracted from the data of [Bettenworth et al.](https://doi.org/10.1038/s41467-022-30307-6) or, since information was lacking, assumed from the simulation of the LuxR/LuxI quorum sensing system of _Vibrio fisheri_ in [Buceta et al.](https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6). If new literature comes out about the actual rates of the _S. meliloti_ species, it's advised to update them.
+The reaction rates are in the parameters.txt file. They were extracted from the data of [Bettenworth et al.](https://doi.org/10.1038/s41467-022-30307-6) or, when information was lacking, assumed identical to the simulation of the LuxR/LuxI quorum sensing system of _Vibrio fisheri_ in [Buceta et al.](https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6). If new literature comes out about the actual rates of the _S. meliloti_ species, it's advised to update them.
 
 ## Deterministic simulations
 
