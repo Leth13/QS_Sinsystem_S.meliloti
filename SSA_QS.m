@@ -32,11 +32,12 @@ DNAexpR_init = y(11);
 SINRplot = zeros(numberofreactions, numberofcells);
 SINIplot = zeros(numberofreactions, numberofcells);
 EXPRstarplot = zeros(numberofreactions, numberofcells);
-DNAsinRstarplot = zeros(numberofreactions, numberofcells);
 EXPRplot = zeros(numberofreactions, numberofcells);
 timeplot = zeros(numberofreactions, numberofcells);
 totaltime = 0;
+
 for i=1:numberofcells
+
     EXPR = EXPR_init;
     SINR = SINR_init;
     SINI = SINI_init;
@@ -50,9 +51,12 @@ for i=1:numberofcells
     DNAexpR = DNAexpR_init;
     step = 0;
     k = 1;
-    while (k<=numberofreactions) 
+
+    %calculate the propensity functions, the time of reactions and the cumulative propensity function
+    
+    while (k<=numberofreactions)
                 rr = rand(2,1);
-                a1 = beta*DNAexpR; %can't be 0
+                a1 = beta*DNAexpR;
                 a2 = mu*EXPR; 
                 a3 = epsilon*EXPR; 
                 a4 = beta*DNAsinIstar; 
