@@ -1,6 +1,6 @@
 cff-version: 1.0
 message: "If you use this software, please cite it as below."
-authors:
+author:
 - family-names: "Marini"
   given-names: "Sara"
   orcid: "https://orcid.org/0009-0006-4112-0449"
