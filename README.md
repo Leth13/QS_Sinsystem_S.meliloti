@@ -1,6 +1,6 @@
-# Quorum-sensing simulation of the Sin system of Shinorizobium meliloti
+# Quorum-sensing simulation of the Sin system of _Sinorhizobium meliloti_
 
-This project contains three algorythms to simulate on Matlab the quorum sensing Sin system of Sinorhizobium meliloti .
+This project contains three algorythms to simulate on Matlab the quorum sensing Sin system of _Sinorhizobium meliloti_.
 
 ## Model
 
@@ -8,7 +8,7 @@ blah blah
 
 ## Reaction Rates
 
-The reaction rates are in the parameters.txt file. They were extracted from the data of [Bettenworth et al.](https://doi.org/10.1038/s41467-022-30307-6) or, where information was lacking, assumed from the simulation of the LuxR/LuxI quorum sensing system of Vibrio fisheri in [Buceta et al.](https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6). If new literature comes out about the actual rates of the S. meliloti species, it's advised to update them.
+The reaction rates are in the parameters.txt file. They were extracted from the data of [Bettenworth et al.](https://doi.org/10.1038/s41467-022-30307-6) or, since information was lacking, assumed from the simulation of the LuxR/LuxI quorum sensing system of _Vibrio fisheri_ in [Buceta et al.](https://bmcsystbiol.biomedcentral.com/articles/10.1186/1752-0509-7-6). If new literature comes out about the actual rates of the _S. meliloti_ species, it's advised to update them.
 
 ## Deterministic simulations
 
@@ -16,7 +16,7 @@ The deterministic simulation is based on a set of ODES and the [ODEset solver of
 
 myode_full is blah blah
 
-myode_expr has the internal variable 'DNAexpr = 0' to simulate a mutant lacking the expr gene.
+myode_expr has the internal variable 'DNAexpr = 0' to simulate a mutant lacking the _expr_ gene.
 
   example code
 
