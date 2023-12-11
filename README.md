@@ -6,7 +6,7 @@ This project contains three algorythms to simulate on Matlab the quorum sensing 
 
 There are a total of 23 reactions characterizing the model.
 
-The transcription and translation rates of all genes were simplified in one reaction.
+The transcription and translation rates of all genes were simplified in one rate.
 
 ## Reaction Rates
 
