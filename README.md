@@ -26,9 +26,9 @@ The SSA_QS.m contains the [gillespie style simulation](https://en.wikipedia.org/
 
 It needs all 15 reactions rates and the starting number of all metabolite/genes. The internal variable V accounts for the statistical effect of the volume of reaction on one order or superior reactions.
 
-...
+`
   function [SINIplot, SINRplot, EXPRstarplot, EXPRplot, timeplot, meantime] = SSA_QS(y, parameters, numberofcells, numberofreactions)
-...
+`
 
 Mutants can be simulated by changing the values of reactions rates.
 
