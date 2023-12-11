@@ -24,18 +24,17 @@ myode_expr simulates a mutant lacking the _expr_ gene by setting the internal va
 
 The SSA_QS.m contains the [gillespie style simulation](https://en.wikipedia.org/wiki/Gillespie_algorithm) for all tot reaction of the Sin QS system.
 
-It needs 
-  blah blah 
-and spouts 
-  blah blah
+It needs all 15 reactions rates and the starting number of all metabolite/genes. The internal variable V accounts for the statistical effect of the volume of reaction on one order or superior reactions.
+
+  function [SINIplot, SINRplot, EXPRstarplot, EXPRplot, timeplot, meantime] = SSA_QS(y, parameters, numberofcells, numberofreactions)
 
 Mutants can be simulated by changing the values of reactions rates.
 
 ## Confronting simulations
 
-See examples
 
-## Frequency of expression
+
+## Frequency of SinI expression
 
 We used the [peakfinder](https://www.mathworks.com/matlabcentral/fileexchange/25500-peakfinder-x0-sel-thresh-extrema-includeendpoints-interpolate) function to calculate the frequency of pulses of expression of SinI.
 
