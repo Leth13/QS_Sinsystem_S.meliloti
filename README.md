@@ -20,7 +20,7 @@ It needs all 15 reactions rates and the starting number of all metabolite/genes,
 
 myode_full is the wild-type model of the Sin QS system.
 
-myode_expr simulates a mutant lacking the _expr_ gene by setting the internal variable ` DNAexpr = 0 `.
+myode_expr.m simulates a mutant lacking the _expr_ gene by setting the internal variable ` DNAexpr = 0 `.
 
 ## Stochastic simulation
 
