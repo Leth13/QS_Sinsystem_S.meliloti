@@ -38,8 +38,6 @@ We used the [peakfinder](https://www.mathworks.com/matlabcentral/fileexchange/25
 
 example code.
 
-As seen in example X, we used the [peakfinder.m]() algorythm to count the maximums.
-
 ## credit
 
 
