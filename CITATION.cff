@@ -1,8 +1,12 @@
-@software{QS_sim,
-  author = {Sara Marini, Marco Fondi},
-  month = {12},
-  title = {{My Research Software}},
-  url = {https://github.com/Leth13/QS_Sinsystem_S.meliloti},
-  version = {1.0},
-  year = {2023},
-}
+cff-version: 1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Marini"
+  given-names: "Sara"
+  orcid: "https://orcid.org/0009-0006-4112-0449"
+- family-names: "Fondi"
+  given-names: "Marco"
+title: "QS_Sinsystem_S.meliloti"
+version: 1.0
+date-released: 2023-12-10
+url: "https://github.com/Leth13/QS_Sinsystem_S.meliloti"
