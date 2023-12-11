@@ -6,7 +6,7 @@ This project contains three algorythms to simulate on Matlab the quorum sensing 
 
 There are a total of 23 reactions characterizing the model.
 
-The transcription and translation rates of all genes were simplified in one rate.
+The transcription and translation reactions were simplified in one reaction with one rate, beta.
 
 ## Reaction Rates
 
@@ -18,7 +18,7 @@ The deterministic simulation is based on a set of ODES resolved by the [ODEset s
 
 myode_full is the wild-type model of the Sin QS system.
 
-myode_expr has the internal variable 'DNAexpr = 0' to simulate a mutant lacking the _expr_ gene.
+myode_expr simulates a mutant lacking the _expr_ gene by setting the internal variable 'DNAexpr = 0'.
 
 ## Stochastic simulation
 
