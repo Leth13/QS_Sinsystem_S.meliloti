@@ -30,7 +30,7 @@ It needs all 15 reactions rates and the starting number of all metabolite/genes.
   function [SINIplot, SINRplot, EXPRstarplot, EXPRplot, timeplot, meantime] = SSA_QS(y, parameters, numberofcells, numberofreactions)
 `
 
-Mutants can be simulated by changing the values of reactions rates.
+Mutants can be simulated by changing the values of reactions rates/genes.
 
 ## Confronting simulations
 
