@@ -36,7 +36,8 @@ Mutants can be simulated by changing the values of reactions rates/genes.
 
 After simulating both the deterministic model and the stochastic model, you can quickly compare the results in one image.
 
-`
+```
+
 figure("name", "SINI expression")
 
 set(gca,'Fontsize',18);
@@ -63,7 +64,8 @@ yxis = max(max(SINIplot(:,l)))*1.007;
 axis([0 xxis 0 yxis]);
 
 set(gca,'Fontsize',18);
-`
+
+```
 
 ## Frequency of SinI expression
 
