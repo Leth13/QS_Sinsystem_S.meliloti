@@ -4,7 +4,9 @@ This project contains three algorythms to simulate on Matlab the quorum sensing 
 
 ## Model
 
-blah blah
+There are a total of 23 reactions characterizing the model.
+
+The transcription and translation rates of all genes were simplified in one reaction.
 
 ## Reaction Rates
 
@@ -12,32 +14,33 @@ The reaction rates are in the parameters.txt file. They were extracted from the 
 
 ## Deterministic simulations
 
-The deterministic simulation is based on a set of ODES and the [ODEset solver of Matlab](https://it.mathworks.com/help/matlab/ref/odeset.html).
+The deterministic simulation is based on a set of ODES resolved by the [ODEset solver of Matlab](https://it.mathworks.com/help/matlab/ref/odeset.html).
 
-myode_full is blah blah
+myode_full is the wild-type model of the Sin QS system.
 
 myode_expr has the internal variable 'DNAexpr = 0' to simulate a mutant lacking the _expr_ gene.
 
-  example code
-
 ## Stochastic simulation
 
-The SSA_QS.m contains the gillespie style simulation (insert link) for all tot reaction of the Sin QS system. 
+The SSA_QS.m contains the [gillespie style simulation](https://en.wikipedia.org/wiki/Gillespie_algorithm) for all tot reaction of the Sin QS system.
+
 It needs 
   blah blah 
 and spouts 
   blah blah
 
+Mutants can be simulated by changing the values of reactions rates.
+
 ## Confronting simulations
 
 See examples
 
-## How to count pulses
+## Frequency of expression
 
 We used the [peakfinder](https://www.mathworks.com/matlabcentral/fileexchange/25500-peakfinder-x0-sel-thresh-extrema-includeendpoints-interpolate) function to calculate the frequency of pulses of expression of SinI.
 
 example code.
 
-## credit
+## Credit
 
 
