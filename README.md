@@ -16,7 +16,7 @@ The reaction rates are in the parameters.txt file. They were extracted from the 
 
 The deterministic simulation is based on a set of ODES resolved by the [ODEset solver of Matlab](https://it.mathworks.com/help/matlab/ref/odeset.html).
 
-It needs all 15 reactions rates and the starting number of all metabolite/genes, except ` DNA_expr `, which is an internal variable.
+It needs all 15 reactions rates and the starting number of all metabolite/genes, except ` DNAexpr `, which is an internal variable.
 
 myode_full is the wild-type model of the Sin QS system.
 
