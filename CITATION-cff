@@ -1,0 +1,8 @@
+@software{QS_sim,
+  author = {Sara Marini, Marco Fondi},
+  month = {12},
+  title = {{My Research Software}},
+  url = {https://github.com/Leth13/QS_Sinsystem_S.meliloti},
+  version = {1.0},
+  year = {2023},
+}
