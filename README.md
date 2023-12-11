@@ -16,9 +16,11 @@ The reaction rates are in the parameters.txt file. They were extracted from the 
 
 The deterministic simulation is based on a set of ODES resolved by the [ODEset solver of Matlab](https://it.mathworks.com/help/matlab/ref/odeset.html).
 
+It needs all 15 reactions rates and the starting number of all metabolite/genes, except `DNA_expr`, which is an internal variable.
+
 myode_full is the wild-type model of the Sin QS system.
 
-myode_expr simulates a mutant lacking the _expr_ gene by setting the internal variable 'DNAexpr = 0'.
+myode_expr simulates a mutant lacking the _expr_ gene by setting the internal variable `DNAexpr = 0`.
 
 ## Stochastic simulation
 
@@ -34,44 +36,13 @@ Mutants can be simulated by changing the values of reactions rates/genes.
 
 ## Confronting simulations
 
-After simulating both the deterministic model and the stochastic model, you can quickly compare the results in one image.
-
-```
-
-figure("name", "SINI expression")
-
-set(gca,'Fontsize',18);
-
-for l = 1:numberofcells
-
-    plot(timeplot(:,l),SINIplot(:,l),'HandleVisibility','off');
-    
-    hold on
-    
-end
-plot(tdet,det(:,3),'--k','Linewidth',4);
-
-xlabel('time [min]','interpreter','latex');
-
-ylabel('number of $SINI$ molecules','interpreter','latex');
-
-hh=legend('solution of ODEs');
-
-set(hh,'interpreter','latex','location','northwest','Fontsize',18);
-
-yxis = max(max(SINIplot(:,l)))*1.007;
-
-axis([0 xxis 0 yxis]);
-
-set(gca,'Fontsize',18);
-
-```
+See the file QS.m.
 
 ## Frequency of SinI expression
 
 We used the [peakfinder](https://www.mathworks.com/matlabcentral/fileexchange/25500-peakfinder-x0-sel-thresh-extrema-includeendpoints-interpolate) function to calculate the frequency of pulses of expression of SinI.
 
-example code.
+See QS_pulses.m
 
 ## Credit
 
