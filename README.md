@@ -24,7 +24,7 @@ myode_expr.m simulates a mutant lacking the _expr_ gene by setting the internal 
 
 ## Stochastic simulation
 
-The SSA_QS.m contains the [gillespie style simulation](https://en.wikipedia.org/wiki/Gillespie_algorithm) for all tot reaction of the Sin QS system.
+[SSA_QS.m](SSA_QS.m) contains the [gillespie style simulation](https://en.wikipedia.org/wiki/Gillespie_algorithm) for all tot reaction of the Sin QS system.
 
 It needs all 15 reactions rates and the starting number of all metabolite/genes. The internal variable V accounts for the statistical effect of the volume of reaction on one order or superior reactions.
 
