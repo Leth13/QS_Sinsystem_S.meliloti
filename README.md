@@ -18,9 +18,9 @@ The deterministic simulation is based on a set of ODES resolved by the [ODEset s
 
 It needs all 15 reactions rates and the starting number of all metabolite/genes, except ` DNAexpr `, which is an internal variable.
 
-(myode_full.m) is the wild-type model of the Sin QS system.
+[myode_full.m](myode_full.m) is the wild-type model of the Sin QS system.
 
-(myode_expr.m) simulates a mutant lacking the _expr_ gene by setting the internal variable ` DNAexpr = 0 `.
+[myode_expr.m](myode_expr.m) simulates a mutant lacking the _expr_ gene by setting the internal variable ` DNAexpr = 0 `.
 
 ## Stochastic simulation
 
@@ -36,13 +36,13 @@ Mutants can be simulated by changing the values of reactions rates/genes.
 
 ## Confronting simulations
 
-See the file (QS.m).
+See the file [QS.m](QS.m).
 
 ## Frequency of SinI expression
 
 We used the [peakfinder](https://www.mathworks.com/matlabcentral/fileexchange/25500-peakfinder-x0-sel-thresh-extrema-includeendpoints-interpolate) function to calculate the frequency of pulses of expression of SinI.
 
-See (QS_pulses.m)
+See [QS_pulses.m](QS_pulses.m)
 
 ## Credit
 
