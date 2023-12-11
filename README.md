@@ -38,19 +38,30 @@ After simulating both the deterministic model and the stochastic model, you can 
 
 `
 figure("name", "SINI expression")
+
 set(gca,'Fontsize',18);
+
 for l = 1:numberofcells
+
     plot(timeplot(:,l),SINIplot(:,l),'HandleVisibility','off');
+    
     hold on
+    
 end
-hold on;
 plot(tdet,det(:,3),'--k','Linewidth',4);
+
 xlabel('time [min]','interpreter','latex');
+
 ylabel('number of $SINI$ molecules','interpreter','latex');
+
 hh=legend('solution of ODEs');
+
 set(hh,'interpreter','latex','location','northwest','Fontsize',18);
+
 yxis = max(max(SINIplot(:,l)))*1.007;
-axis([0 xxis 0 yxis])
+
+axis([0 xxis 0 yxis]);
+
 set(gca,'Fontsize',18);
 `
 
