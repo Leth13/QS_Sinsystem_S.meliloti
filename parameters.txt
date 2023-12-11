@@ -1,15 +1,15 @@
- .5 % min^-1 - Buceta
-0.04  %min^-1 - Production rate of AHL_I - Buceta
+ 0.5 % min^-1 - Gene translation and transcription - Buceta
+0.04 % min^-1 - Production rate of AHL_I - Buceta
 10 % min^-1 - infusion rate of AHL_E - Buceta
 10 % min^-1 - Diffusion rate of AHL_E - Buceta
-0.01 %min^-1 - growth rate 
+0.01 %min^-1 - Growth rate -Bettenworth
 0.0015 % min^-1  - Protein degradation - Bettenworth
 0.5 % min^-1 * nM^-1 ExpR - AHL association rate - Buceta
 10  % min^-1 - ExpR* dissociation rate - Buceta
- .05 % min^-1 * nM^-1 SINR - DNA_SINI association rate - Buceta
+ 0.05 % min^-1 * nM^-1 SINR - DNA_SINI association rate - Buceta
 10 % min^-1 - DNA_sinI* dissociation rate - Buceta
 0.05 % min^-1 * nM^-1 ExpR* - DNA_SINR association rate - Buceta
 10 % min^-1 - DNA_SINR* dissociation rate - Buceta
 0.05 % min^-1 * nM^-1 ExpR - SINR - DNA_SINI association rate - Buceta
-0.16 % epsilonsinr Bettenworth
-0.001 %rho
+0.16 % min^-1 - SinR degradation - Bettenworth
+0.001 % min^-1 - AHL_o degradation - Buceta
