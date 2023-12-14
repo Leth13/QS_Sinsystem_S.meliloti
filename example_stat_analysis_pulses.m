@@ -51,11 +51,12 @@ for i = 1:iter
     end
     meanpulses(i) = (mean(npeaks)/(meantime))*60;
 end
-bigmeanpulses = mean(mean(realpulses));
+truemeanpulses = mean(mean(realpulses));
 
-
+%setting expr- mutant
 realpulses_expr = size(iter);
 Initials(end) = 0;
+
 for i = 1:iter
     [SINIplot, SINRplot, EXPRstarplot, EXPRplot, DNAsinRstarplot, timeplot, meantime] = SSA_QS(Initials, parameters, numberofcells, numberofreactions);
     npeaks = size(numberofcells);
@@ -65,11 +66,12 @@ for i = 1:iter
     end
     meanpulses_expr(i) = (mean(npeaks)/(meantime))*60;
 end
-bigmeanpulses_expr = mean(mean(realpulses_expr));
+truemeanpulses_expr = mean(mean(meanpulses_expr));
 
-%plot to see what we spent time on
+%boxplot to see what we spent time on
 
 d = table([meanpulses, meanpulses_expr], categorical({'Wildtype', 'Wildtype','Wildtype','Wildtype','Wildtype','Wildtype', 'Wildtype','Wildtype','Wildtype','Wildtype','Wildtype', 'Wildtype','Wildtype','Wildtype','Wildtype','Wildtype', 'Wildtype','Wildtype','Wildtype','Wildtype','Wildtype', 'Wildtype','Wildtype','Wildtype','Wildtype','Wildtype', 'Wildtype','Wildtype','Wildtype','Wildtype', 'Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant','Mutant'}));
+
 figure(1)
 set(gca,'Fontsize',18);
 boxplot(d.Var1, d.Var2)
