@@ -36,13 +36,13 @@ Mutants can be simulated by changing the values of reactions rates/genes.
 
 ## Confronting simulations
 
-See the file [QS.m](QS.m).
+See the file [example_confronting_simulations.m](example_confronting_simulations.m).
 
 ## Frequency of SinI expression
 
 We used the [peakfinder](https://www.mathworks.com/matlabcentral/fileexchange/25500-peakfinder-x0-sel-thresh-extrema-includeendpoints-interpolate) function to calculate the frequency of pulses of expression of SinI.
 
-See [QS_pulses.m](QS_pulses.m)
+See [example_stat_analysis_pulses.m](example_stat_analysis_pulses.m).
 
 ## Credit
 
