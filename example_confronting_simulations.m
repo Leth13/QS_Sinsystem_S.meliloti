@@ -67,5 +67,21 @@ hh=legend('solution of ODEs');
 set(hh,'interpreter','latex','location','northwest','Fontsize',18);
 yxis = max(max(SINIplot(:,l)))*1.007;
 axis([0 xxis 0 yxis])
+
+
+figure("name", "SINR expression")
 set(gca,'Fontsize',18);
+for l = 1:numberofcells
+    plot(timeplot(:,l),SINRplot(:,l),'HandleVisibility','off');
+    hold on
+end
+hold on;
+plot(tdet,det(:,2),'--k','Linewidth',4);
+xlabel('time [min]','interpreter','latex');
+ylabel('number of $SINR$ molecules','interpreter','latex');
+hh=legend('solution of ODEs');
+set(hh,'interpreter','latex','location','northwest','Fontsize',18);
+yxis = max(max(SINRplot(:,l)))*1.007;
+axis([0 xxis 0 yxis])
+
 
