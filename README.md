@@ -26,7 +26,7 @@ It needs all 15 reactions rates and the starting number of all metabolite/genes,
 
 [SSA_QS.m](SSA_QS.m) contains the [gillespie style simulation](https://en.wikipedia.org/wiki/Gillespie_algorithm) for all tot reaction of the Sin QS system.
 
-It needs all 15 reactions rates and the starting number of all metabolite/genes. The internal variable V accounts for the statistical effect of the volume of reaction on one order or superior reactions.
+It needs all 15 reactions rates and the starting number of all metabolite/genes. The internal variable V, extracted from [Xiongfeng et al.](doi:10.1128/msphere.00567-18), accounts for the statistical effect of the volume of the cell on reactions of one order or more.
 
 `
   function [SINIplot, SINRplot, EXPRstarplot, EXPRplot, timeplot, meantime] = SSA_QS(y, parameters, numberofcells, numberofreactions)
